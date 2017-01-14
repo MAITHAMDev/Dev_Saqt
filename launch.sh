@@ -126,12 +126,11 @@ else
   
   #Adding some color. By @MehdiHS
    echo -e "\033[38;5;208m"
-   echo -e "     > DEV : BAKEY-SADIK                                          "
-   echo -e "     > DEV : @illOlli                                           "
-   echo -e "     > Bot ID : DEV : @twsl_babot                       "
-   echo -e "     > Github : https://github.com/blackops97/KING_TELE    "
-   echo -e "          BY BAKER-SADIK                                   \033[0;00m"
+   echo -e "     > Channel : @Ch_Dev                        "
+   echo -e "     > Developer : @ii02ii                       "
+   echo -e "     > Bot ID : @ii02ii_bot                        "
+   echo -e "     > Github : GitHub.com/ii02ii/DevSaqt     "
+   echo -e "                                              \033[0;00m"
    echo -e "\e[36m"
-  rm -r ../.telegram-cli/state #Prevent tg from crash
-  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/KING_TELE.lua -l 1 -E $@
+  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./Dev_Saqt/Dev_Saqt.lua -l 1 -E $@
 fi
