@@ -11,23 +11,15 @@ do local _ = {
     "admin",
     "all",
     "anti_spam",
-    "ar-azan",
-    "ar-boomzain",
-    "ar-boomzain2",
     "ar-broadcast",
     "ar_badword",
     "ar_banhammer",
-    "ar_info",
     "ar_me",
     "delete",
     "dev",
     "echo",
     "get",
     "getfile",
-    "he1",
-    "he2",
-    "he3",
-    "he4",
     "hedev",
     "help",
     "image",
@@ -38,7 +30,6 @@ do local _ = {
     "leave",
     "leave_ban",
     "lock_bot",
-    "map",
     "msg_checks",
     "name",
     "newgroup",
@@ -53,12 +44,10 @@ do local _ = {
     "sticker23",
     "supergroup",
     "tagall",
-    "time",
-    "voice",
-    "weather",
     "welcome",
     "zkhrafa",
     "zkhrafaa",
+    "lockedit"
   },
   help_text = "[[ْ#DEV @ii02ii]],",
   help_text_realm = "[[ْ#DEV @ss02ss]],",
@@ -68,8 +57,7 @@ do local _ = {
   },
   sudo_users = {
     162961370,
-    260702932,
-    290544647
+    211882985
   }
 }
 return _
