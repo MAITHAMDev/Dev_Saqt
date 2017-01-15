@@ -211,38 +211,32 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "6",
     "@ii02ii",
+    "FWD",
+    "Feedback",
+    "Serverinfo",
+    "VIRSON",
     "addbot",
+    "addreplay",
     "admin",
     "all",
     "anti_spam",
-    "ar-azan",
-    "ar-boomzain",
-    "ar-boomzain2",
     "ar-broadcast",
     "ar_badword",
-    "ar_banhammerr",
-    "ar_info",
+    "ar_banhammer",
     "ar_me",
-    "boty",
     "delete",
     "dev",
     "echo",
-    "Feedback",
-    "FWD",
     "get",
-    "he1",
-    "he2",
-    "he3",
-    "he4",
+    "getfile",
     "hedev",
     "help",
+    "image",
     "ingroup",
     "inpm",
     "inrealm",
     "invite",
-    "iq_abs",
     "leave",
     "leave_ban",
     "lock_bot",
@@ -253,34 +247,28 @@ function create_config( )
     "plugins",
     "rebot",
     "redis",
-    "run1",
+    "reply",
     "send",
     "set",
     "stats",
     "sticker23",
     "supergroup",
     "tagall",
-    "textphoto",
-    "time",
-    "translate",
-    "voice",
-    "weather",
     "welcome",
-    "whitelist",
     "zkhrafa",
     "zkhrafaa",
+    "lockedit"
     },
-    sudo_users = { 218385683,0,tonumber(our_id)},--Sudo users
+    sudo_users = { 162961370,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[DevSaqt )(
+    about_text = [[Dev_Saqt]]
 آهہٰلآ وسہٰهلآ بہٰك صہٰديہٰقہٰيے آلےمےطےوريےن
 @ii02ii
 @ss02ss
-@mm01mm
 Channel DEV Saqt TEAM
 @Ch_Dev
-آلآصہٰدآر :
-https://github.com/ii02ii/DevSaqt
+آلآصہٰدآر آلہٰثہٰآنہٰي :
+https://github.com/ii02ii/Dev_Saqt
 ]],
     help_text_realm = [[
 Realm Commands:
