@@ -49,9 +49,9 @@ do local _ = {
     "zkhrafaa",
     "lockedit"
   },
-  help_text = "[[ْ#DEV @ii02ii]],",
-  help_text_realm = "[[ْ#DEV @ss02ss]],",
-  help_text_super = "[[ْ#DEV @mm01mm]]",
+  help_text = "[{#DEV @ii02ii}],",
+  help_text_realm = "[{#DEV @ss02ss}],",
+  help_text_super = "[{#Ch_Dev @Ch_Dev}]",
   moderation = {
     data = "data/moderation.json"
   },
