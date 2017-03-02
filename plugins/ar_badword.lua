@@ -1,16 +1,7 @@
---[[ 
-▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
-▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY jOker                          ▀▄ ▄▀ 
-▀▄ ▄▀     BY joker       (@fuck_8_you)     ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY joker                 ▀▄ ▄▀   
-▀▄ ▄▀       broadcast  : منع الكلمات         ▀▄ ▄▀ 
-▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
---]]
 local function addword(msg, name)
-    local hash = 'chat:'..msg.to.id..':badword'
-    redis:hset(hash, name, 'newword')
-    return "تہٰم ✅ آضہٰآفہٰة كہٰلہٰمہٰة جہٰديہٰدة📝  فہٰيے قہٰآئہٰمہٰةة آلہٰمہٰنہٰع  ❌🚷\n>"..name
+    local Ch_Dev = 'chat:'..msg.to.id..':badword'
+    redis:hset(Ch_Dev, name, 'newword')
+    return "تہۧم ✅ آضہۧآفہۧة كہۧلہۧمہۧة جہۧديہۧدة📝  فہۧيے قہۧآئہۧمہۧةة آلہۧمہۧنہۧع  ❌🚷\n>"..name
 end
 
 local function get_variables_hash(msg)
@@ -20,11 +11,11 @@ local function get_variables_hash(msg)
 end 
 
 local function list_variablesbad(msg)
-  local hash = get_variables_hash(msg)
+  local Ch_Dev = get_variables_hash(msg)
 
-  if hash then
-    local names = redis:hkeys(hash)
-    local text = 'قہٰآئہٰمہٰةة آلہٰكہٰلہٰمہٰآت 📝 الہٰمہٰمنہٰوع كہٰتہٰبہهہٰآ هہٰنہٰآ ↩️🤖 :\n\n'
+  if Ch_Dev then
+    local names = redis:hkeys(Ch_Dev)
+    local text = 'قہۧآئہۧمہۧةة آلہۧكہۧلہۧمہۧآت 📝 الہۧمہۧمنہۧوع كہۧتبہۧهہۧآ هہۧنہۧآ ↩️🤖 :\n\n'
     for i=1, #names do
       text = text..'> '..names[i]..'\n'
     end
@@ -38,7 +29,7 @@ function clear_commandbad(msg, var_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:del(hash, var_name)
-  return 'تَمِ ☑️ مہٰسہٰح قہٰآئہٰمہٰةة آلہٰمہٰنہٰع 🤖⁉️'
+  return 'تہۧم ☑️ مہۧسہۧح قہۧآئہۧمہۧةة آلہۧمہۧنہۧع 🤖⁉️'
 end
 
 local function list_variables2(msg, value)
@@ -76,10 +67,10 @@ function clear_commandsbad(msg, cmd_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:hdel(hash, cmd_name)
-  return ''..cmd_name..'  تہٰم ✅ آلہٰغہٰاء هہٰذه آلہٰكہٰلہٰمہٰةة 📝 مہٰن  قہٰآئہٰمہٰةة آلہٰمہٰنہٰع  🤖🍷'
+  return ''..cmd_name..'  تہۧم ✅ آلہۧغہۧاء هہۧذه آلہۧكہۧلہۧمہۧةة 📝 مہۧن  قہۧآئہۧمہۧةة آلہۧمہۧنہۧع  🤖🍷'
 end
 
-local function run(msg, matches)
+local function Memo(msg, matches)
   if matches[2] == 'منع' then
   if not is_momod(msg) then
    return 'only for moderators'
@@ -89,14 +80,14 @@ local function run(msg, matches)
   local text = addword(msg, name)
   return text
   end
-  if matches[2] == 'قائمه المنع' then
+  if matches[2] == 'قائمة المنع' then
   return list_variablesbad(msg)
-  elseif matches[2] == 'تنظيف قائمه المنع' then
+  elseif matches[2] == 'مسح قائمة المنع' then
 if not is_momod(msg) then return '_|_' end
   local asd = '1'
     return clear_commandbad(msg, asd)
   elseif matches[2] == 'الغاء منع' or matches[2] == 'rw' then
-   if not is_momod(msg) then return '_|_' end
+   if not is_momod(msg) then return 'ديہۧ 🌞✨' end
     return clear_commandsbad(msg, matches[3])
   else
     local name = user_print_name(msg.from)
@@ -110,10 +101,10 @@ return {
   "^()(rw) (.*)$",
   "^()(منع) (.*)$",
    "^()(الغاء منع) (.*)$",
-    "^()(قائمه المنع)$",
-    "^()(تنظيف قائمه المنع)$",
+    "^()(قائمة المنع)$",
+    "^()(مسح قائمة المنع)$",
 "^(.+)$",
 	   
   },
-  run = run
+  run = Memo
 }
