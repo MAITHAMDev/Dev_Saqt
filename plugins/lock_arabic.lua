@@ -1,3 +1,8 @@
+--[[
+هم كولو خمط !!
+ملف اللغة العربية ذاك  دائما يصير بي خطا بالريديس والكل يدري ؟
+فشوفو هل ملف 
+]]--
 local function run(msg) 
     local data = load_data(_config.moderation.data) 
  if data[tostring(msg.to.id)]['settings']['lock_arabic'] == 'yes' then 
@@ -39,3 +44,9 @@ return {patterns = {
   }, 
   run = run 
 }
+--[[
+تم كتابة الملف من قبل ميمو مشآكل العراقي 
+@II02II
+قناتي 
+@Ch_Dev
+]]--
