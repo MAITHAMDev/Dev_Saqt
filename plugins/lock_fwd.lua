@@ -1,12 +1,12 @@
 
 do 
 
-local function pre_process(msg) 
+local function Ch_Dev(msg) 
     --Checking mute 
     local Memo = 'mate:'..msg.to.id 
     if redis:get(Memo) and msg.fwd_from and not is_sudo(msg) and not is_owner(msg) and not is_momod(msg) and not is_admin1(msg)  then 
             delete_msg(msg.id, ok_cb, true) 
-            send_large_msg(get_receiver(msg), '#تہٰحہٰذيہٰر❌ يہٰا حہٰمہٰيہٰر 🐴 مہٰمہٰنہٰو؏ 🚳 آعہٰادۃ 💢 آلہٰتہٰوجہٰيہٰة۵ 🔛 فہٰيے🔃آلہٰمہٰجموعہٰةة 🤖👥\n👾 #آلہٰعہضہٰو : @'..msg.from.username) 
+            send_large_msg(get_receiver(msg), '#تہۧحہۧذيہۧر 🐸🍷 /nلہۧتہۧعہۧيہۧد آلہۧتہۧوجہۧيہۧه يہۧآ  🐴 /n فہۧيے🔃آلہۧمہۧجہۧمہۧوعہۧةة 🤖👥\n👾 #آلہۧمہطہۧيے : @'..msg.from.username) 
             return "done" 
         end 
         return msg 
@@ -32,6 +32,6 @@ return {
         '^(فتح) التوجيه$' 
     }, 
     run = ii02ii, 
-    pre_process = pre_process 
+    pre_process = Ch_Dev 
 } 
 end 
