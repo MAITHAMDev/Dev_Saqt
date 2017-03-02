@@ -1,18 +1,29 @@
+--[[ 
+الملف يحتوي ع  8 ملفات مدموجة سوة 
+وصايرة عبارة عن سوبر كروب ؟
+تقريبا للمطورين الي يفتهمون !!
+وتم صنع الملف من قبل ميمو مشآكل العراقي 
+@ii02ii
+بوت تواصلي 
+@ii02ii_bot
+قناتي 
+@Ch_Dev
+اختصرت الكم الملفات اهنا علمود ميوكف البوت بسرعة 
+ولسهولة تغيير الحقوق 
+]]--
 do
-
+             --   هذا ملف المطور وتغيير حقوقة  سهلة  حييل شيل اسمي وخلي اسمك وشيل معرفي وخلي معرفك وقناتي اذا عندك قناة تطوير واذا معندك قناة تطوير عيف قناتي
 local function Ch_Dev(msg, matches)
--- ملف المطور الي يكتب مطور هذا يطلعلة وكررتة مرتين علمود لكل للعضو والادمن والمطور والمدير يطلعلة
 local reply_id = msg['id']
   if matches[1] == "المطور" then
     local ii02ii = [[
 يہۧعہۧمہۧل بہۧوتہۧ سہۧآقہۧط ع مہۧجہۧمہۧوعآت 5K 🌞✨
 
-     ≪ تہۧم صہۧنہۧع آلہۧبہۧوتہۧ مہۧن قہۧبہۧل آلہۧمہۧطور 🙁🍷 ≫
-                 🔹#Dev     #مہٰيہٰمہٰو مہٰشہٰآكہٰل آلہٰعہٰرآقہٰيے  🔹
+≪ تہۧم صہۧنہۧع آلہۧبہۧوتہۧ مہۧن قہۧبہۧل آلہۧمہۧطور 🙁🍷 ≫
+ #مہٰيہٰمہٰو مہٰشہٰآكہٰل آلہٰعہٰرآقہٰيے  🔹
 
      
-  ≪مہۧعہۧرفہۧ آلہۧمہۧطہۧور 🐸🎈 ≫
-                      『 @ii02ii 』
+  ≪مہۧعہۧرفہۧ آلہۧمہۧطہۧور 🐸🎈 ≫                      『 @ii02ii 』
                       
     ≪بہۧوتہۧ آلہۧتہۧوآصہۧل :-*≫  
    
@@ -25,14 +36,14 @@ local reply_id = msg['id']
 reply_msg(reply_id, ii02ii, ok_cb, false) 
 end
 
--- ملف معلومات  سيرفرك ينطيك حجم الورك وكلشي 
+                                                   -- ملف معلومات  سيرفرك ينطيك حجم الورك وكلشي 
 if is_sudo(msg) and matches[1] == 'معلومات السيرفر' then 
 local text = io.popen("sh ./data/cmd.sh"):read('*all')
   return text
 end
 
 
--- ملف موقعي للمطور والاونر (المدير) والادمن والعضو
+                                              -- ملف موقعي للمطور والاونر (المدير) والادمن والعضو
 if is_sudo(msg) and matches[1] == 'شنو اني' then 
 local text = " آنہۧتہ بہۧآبہۧآ آلہۧمہۧطہۧور  🌞✨ ".."\n".."🆔 - آيہۧديكہۧ : "..msg.from.id.."\n".."✍🏻✨ - آسہۧمہۧكہۧ : "..msg.from.first_name.."\n".." مہۧعہۧرفہۧكہۧ ↩️👲🏻  : @"..msg.from.username.."\n".."🔝 - آسہۧم آلہۧمہجہۧمہۧوعہۧةة ✅ : "..msg.to.title.."\n"..'📱 - رقہۧمہۧكہۧ 😜🙈 : '..(msg.from.phone or "مآ مہۧحہۧتہۧرمہۧة ومہۧحہۧآفہۧظ رقہۧمہۧة ⛔️‼️")
   return reply_msg(msg.id, text, ok_cb, false) 
@@ -55,7 +66,7 @@ if not is_momod(msg) and matches[1] == 'شنو اني' then
 -- للفوك انتهينا من ملف شنو اني 
 
 
-
+                                                     -- ملف المطور ينادي المطور خلي ايديك ومعرفك 
   if matches[1] == "@ii02ii" then -- خلي معرفك مكان معرفي
   local sudo = 162961370     -- خلي الايدي مالتك مكان  ايديي
  local r = get_receiver(msg)
@@ -63,14 +74,14 @@ if not is_momod(msg) and matches[1] == 'شنو اني' then
   send_large_msg("user#id"..sudo, "📝 لہٰك آسہٰتہٰآذيے  🕵  يہٰردوكہٰ ضہٰروريے  🤖🍷\n\n ".." 👲🏻 مہٰعہٰرفہٰ آلہٰمہٰحہٰتآجہٰك  : @"..msg.from.username.."\n 🆔 آلآيہٰديے   : "..msg.from.id.."\n 📝 آسہٰم آلہٰمہٰجہٰمہٰوعہٰة  : "..msg.to.title.."\n 🆔 آيہٰديے آلہٰمہٰجہٰمہٰوعہٰة  : "..msg.from.id..'\n 🕑 آلہٰوقہٰت : '..os.date(' %T*', os.time())..'\n 📅  آلہٰتہٰآريہٰخ  : '..os.date('!%A, %B %d, %Y*\n', timestamp))
 end
 
-
+                               -- ملف الاصدار تابع لسورس ساقط  
   if matches[1] == "الاصدار" then
         local text = " ✋🏻🤖   آلہٰسہٰورس    DevSaqt  \n\n  🏌 آلآصہٰدآر 👲🏻 V1  \n\n⁉️🤖   مہٰوقہٰع آلہٰمہٰصہٰدر  \n \n https://github.com/ii02ii/DevSaqt \n\n⁉️🕵   مہٰطہٰور آلہٰسہٰورس  : @ii02ii \n\n👾   بہٰوتہٰ تہٰوآصہٰل آلہٰمہٰطہٰوريہٰن  :  @ii02ii_bot \n \n🎸🤖   قہٰنہٰآة آلہٰسہٰورس  :  @Ch_Dev "
         return reply_msg(msg.id, text, ok_cb, false) 
      end
      
      
-  if matches[1] == "معلوماتي" then
+  if matches[1] == "معلوماتي" then          -- ملف الاينفو معلوماتي 
 local memo = '🆔 - آيہۧديكہ  : '..msg.from.id..'\n'
 ..'🤖 - مہۧعہۧرفہۧكہ 🙂: @'..msg.from.username..'\n'
 ..'📝 - آسہۧمہۧكہ آلآولہۧ 🙊 : '..(msg.from.first_name or '')..'\n'
@@ -85,7 +96,7 @@ local memo = '🆔 - آيہۧديكہ  : '..msg.from.id..'\n'
 reply_msg(msg.id, memo, ok_cb, false)
   end
      
-local reply_id = msg ['id']
+local reply_id = msg ['id']             -- ملف الي يحجي ويه البوت خاص  انسخ السطر وخلي معرفك وبوت تواصل والقناة اذا عندك 
 if ( msg.text ) then
 
   if ( msg.to.type == "user" ) then
@@ -94,8 +105,8 @@ if ( msg.text ) then
  end 
  
  
-  if matches[1] == "رست" and is_sudo(msg) then 
-    return os.execute("./launch.sh"):read('*all') 
+  if matches[1] == "رست" and is_sudo(msg) then   -- ملف رست وحدث وريديس اذا كان البوت شغال استخدمها تفيدك  يعني اذا ساعتين وبوتك يوكف 
+    return os.execute("./launch.sh"):read('*all') -- اكتب رست قبل متصيرين ساعتين حيزيد ساعتين  
   elseif matches[1] == "حدث" and is_sudo(msg) then 
      return io.popen("git pull"):read('*all') 
   elseif  matches[1] == "ريديس" and is_sudo(msg) then 
@@ -121,3 +132,11 @@ return {
   run = Ch_Dev
 }
 end
+--[[ 
+الى كل مطور ؟
+سوي هيج ملفات بس لا تنكر !
+اذكر الي سواه بالاول ؟
+#حبكم 
+ميمو مشآكل العراقي 
+@ii02ii
+]]--
