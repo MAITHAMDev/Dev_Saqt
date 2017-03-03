@@ -1,37 +1,63 @@
---[[ 
-▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
-▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY MOHAMMED HISHAM                ▀▄ ▄▀ 
-▀▄ ▄▀     BY MOHAMMEDHISHAM (@TH3BOSS)     ▀▄ ▄▀ 
-▀▄ ▄▀ JUST WRITED BY MOHAMMED HISHAM       ▀▄ ▄▀   
-▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
---]]
-
 do
+local function Ch_Dev(msg,Mushakil)
+    if Mushakil[1] == "chat_add_user"  then 
+     local text = ' آهہۧلاً وسہۧهہۧلآً  🙊💋 '..'\n'..'\n'
+    ..' 📝 آسہۧم آلہمہۧجہمہۧوعہۧةة 🌞✨ :-  '..msg.to.title..'\n'
+    ..' آيہۧدہۧے آلہمہۧجہمہۧوعہۧةة 🆔 :-  '..msg.to.id..'\n'
+    ..' 🔹➖🔸➖🔹➖🔸➖🔹➖🔸➖🔹 '..'\n'
+    ..' آسہۧمہۧكہ/ج حہۧيہۧآتہۧيے 😻💋 :-  '..msg.action.user.print_name..'\n'
+    ..'مہۧعہۧرفہۧكہ/ج 🙇🏻🍷 :- @'..(msg.action.user.username or "لآ يہۧوجہۧد🐸🍆")..'\n'
+    ..'آيہۧديہۧكہ/ج 🆔  :- '..msg.action.user.id..'\n'
+    ..' 🔹➖🔸➖🔹➖🔸➖🔹➖🔸➖🔹 '..'\n'
+    ..'آلہۧصہۧآكہٰ/ة آلہۧيے ضہۧآفہۧكہ/ج 🙇🏻🍷 :- '..msg.from.print_name..'\n'
+    ..' مہۧعہۧرفہ آلہۧيے ضہۧآفہۧكہ/ج 🆔✨  :- @'..(msg.from.username or "لآ يہۧوجہۧد🌚😹")..'\n'
+    ..' 🔹➖🔸➖🔹➖🔸➖🔹➖🔸➖🔹 '..'\n'
+    ..'آلہۧتہۧآريہۧخ 📅✨ :- '..os.date('!%A, %B %d, %Y*\n', timestamp)
+    ..' آلہۧوقہۧت (ضيف للوقت 3 ساعات)🕑 :- '..os.date(' %T*', os.time())..'\n'  
+    ..' قہۧنہۧآة آلہۧمہۧطہۧور 🌞☄   '..'\n'
+    ..' (خاصة للي يريد يصير مطور) 🕵 :- 👇🏻 '..'\n'    
+    ..' @Ch_Dev 🤖💋 '..'\n'
     
-local function mohammedboss(msg,matches)
-    if matches[1] == "chat_add_user"  then 
-      return "💸 آهہٰلآ وسہٰهہٰلآ بہٰكہٰ فہٰيے آلہٰمہٰجہٰمہٰوعہٰةة 💋😻\n".."📝 آسہٰم  آلہٰمہٰجہٰمہٰوعہٰةة 🤖🍷 :: "..msg.to.title.."\n".." 📲 آيہٰديے آلہٰمہٰجہٰمہٰوعہٰةة 🆔 :: "..msg.to.id.."\n".."💋😻آسہٰم آلہٰصہٰآكہٰ/ة آلہٰيے ضہٰآفہٰكہٰ 💻 ::"..(msg.from.first_name or " ").."\n".."🆔 مہٰعہٰرف آلہٰصہٰآكہٰ/ة آلہٰيے ضہٰآفہٰكہ 🕵 :: @"..(msg.from.username or " ").."\n".."🆔 مہٰعہٰرفہٰكہٰ يہٰآلہٰمہٰآخہٰذ كہٰلہٰبيے 😍 :: @"..(msg.action.user.username or "لايوجد " ).."\n".."😶 آيہٰديے  آلہٰشہٰآب/ة آلہٰيے ضہٰآفہٰكہ 🆔 ::"..msg.from.id
-
-    elseif matches[1] == "chat_add_user_link" then
-      return "💸 آهہٰلآ وسہٰهہٰلآ بہٰكہٰ فہٰيے آلہٰمہٰجہٰمہٰوعہٰةة 💋😻\n".."📝 آسہٰم  آلہٰمہٰجہٰمہٰوعہٰةة 🤖🍷 :: "..msg.to.title.."\n".." 📲 آيہٰديے آلہٰمہٰجہٰمہٰوعہٰةة 🆔 :: "..msg.to.id.."\n".."💋😻آسہٰم آلہٰصہٰآكہٰ/ة آلہٰيے ضہٰآفہٰكہٰ 💻 ::"..(msg.from.first_name or " ").."\n".."🆔 مہٰعہٰرف آلہٰصہٰآكہٰ/ة آلہٰيے ضہٰآفہٰكہ 🕵 :: @"..(msg.from.username or " ").."\n".."🆔 مہٰعہٰرفہٰكہٰ يہٰآلہٰمہٰآخہٰذ كہٰلہٰبيے 😍 :: @"..(msg.action.user.username or "لايوجد " ).."\n".."😶 آيہٰديے  آلہٰشہٰآب/ة آلہٰيے ضہٰآفہٰكہ 🆔 ::"..msg.from.id
-
-    end
-    if matches[1] == "chat_del_user" then
-    return "🔺 الله وياك كبد حياتي 😽❤️ سد الباب وراك 🌝"..msg.action.user.first_name
+    return reply_msg(msg.id, text, ok_cb, false)
+ end
+    if Mushakil[1] == "chat_add_user_link" then
+  local text = 'آهہۧلاً وسہۧهہۧلآً  😻💋 '..'\n'..'\n'
+ ..' 📝 آسہۧم آلہمہۧجہمہۧوعہۧةة 🌞✨ :-  '..msg.to.title..'\n'
+    ..' آيہۧدہۧے آلہمہۧجہمہۧوعہۧةة 🆔 :-  '..msg.to.id..'\n'
+    ..' 🔹➖🔸➖🔹➖🔸➖🔹➖🔸➖🔹 '..'\n'
+ ..'آسہۧمہۧكہ/ج حہۧيہۧآتہۧيے  🌞💋 :-  '..msg.from.print_name..'\n'
+    ..'مہۧعہۧرفہۧكہ/ج 🙇🏻🍷:- @'..(msg.from.username or "لآ يہۧوجہۧد 🌞✨")..'\n'
+    ..'آيہۧديہۧكہ/ج 🆔✨ :- '..msg.from.id..'\n'
+    ..' 🔹➖🔸➖🔹➖🔸➖🔹➖🔸➖🔹 '..'\n'
+    ..'آلہۧتہۧآريہۧخ 📅✨ :- '..os.date('!%A, %B %d, %Y*\n', timestamp)
+    ..' آلہۧوقہۧت (ضيف للوقت 3 ساعات)🕑 :- '..os.date(' %T*', os.time())..'\n'  
+    ..' قہۧنہۧآة آلہۧمہۧطہۧور 🌞☄   '..'\n'
+    ..' (خاصة للي يريد يصير مطور) 🕵 :- 👇🏻 '..'\n'    
+    ..' @Ch_Dev 🤖💋 '..'\n'
+    
+    return reply_msg(msg.id, text, ok_cb, false)
+  end
+  if Mushakil[1] == "chat_del_user" then
+   return "  آلہۧزآحہۧف هہۧذا 🌞✨👇🏻:-  \n"..msg.action.user.first_name.."\n".."  غہۧآدر آلہۧكہروبہۧ  🐸🍆 "
 end
 end
+ 
 return {
     patterns = {
-        "^!!tgservice (chat_add_user)$",
-        "^!!tgservice (chat_add_user_link)$",
-        "^!!tgservice (chat_del_user)$"
-       
+    "^!!tgservice (chat_add_user)$",
+    "^!!tgservice (chat_add_user_link)$",        
+    "^!!tgservice (chat_del_user)$",
+    
     },
- run = mohammedboss,
+ run = Ch_Dev,
 }
 end
--- Dev💀: @TH3BOSS
--- Dev bot💀: @ll60Kllbot
--- DevChannel 💀: @llDEV1ll
+--[[ ما احجي شيء  بيك خير سوي نفس هل ملف ؟ 
+ الملف بكتابتي تكمز جيبلي نفس الملف ؟
+ مہٰيہٰمہٰو مہٰشہٰآكہٰل آلہٰعہٰرقہٰيے 
+- @ii02ii
+ بوت تواصلي 
+ @ii02ii_bot
+ قناة المطور
+ @CH_DEV
+]]--
