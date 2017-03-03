@@ -1,5 +1,5 @@
 --[[ 
-الملف يحتوي ع  8 ملفات مدموجة سوة 
+الملف يحتوي ع 11 ملفات مدموجة سوة 
 وصايرة عبارة عن سوبر كروب ؟
 تقريبا للمطورين الي يفتهمون !!
 وتم صنع الملف من قبل ميمو مشآكل العراقي 
@@ -101,6 +101,26 @@ local Memo = matches[2]
 return Memo
 end
     
+  if matches[1] == "جلب ملف" then     --  هذا الملف هو يجيبلك ملف من السيرفر بدون متدخل عليه 
+    local file = matches[2]
+    if is_sudo(msg) then --sudo only !
+      local receiver = get_receiver(msg)
+      send_document(receiver, "./plugins/"..file..".lua", ok_cb, false)
+      else 
+        return nil
+   end
+end
+
+
+  if matches[1] == "send" then 
+    local file = matches[2] 
+    if is_sudo(msg) then 
+      local receiver = get_receiver(msg) 
+      send_document(receiver, "./plugins/"..file..".lua", ok_cb, false) 
+    end 
+  end 
+ 
+ 
 local reply_id = msg ['id']             -- ملف الي يحجي ويه البوت خاص  انسخ السطر وخلي معرفك وبوت تواصل والقناة اذا عندك 
 if ( msg.text ) then
 
@@ -129,6 +149,8 @@ return {
     "^(الاصدار)$",
     "^(معلوماتي)$",
     "^(كرر)(.+)",
+    "^(جلب ملف) (.*)$",
+    "^(send) (.*)$",
     "^(رست)$", 
     "^(حدث)$", 
     "^(ريديس)$",    
