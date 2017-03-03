@@ -40,5 +40,5 @@ return {patterns = {
 "^(https://t.me/)$", 
 "[Tt].[Mm][Ee]/", 
   }, 
-  run = run 
+  run = Ch_Dev 
 }
