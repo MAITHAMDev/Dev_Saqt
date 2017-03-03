@@ -1,12 +1,3 @@
---[[ 
-▀▄ ▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀▄▀▄▄▀▀▄▄▀▀▄▄▀▀▄▄▀▀          
-▀▄ ▄▀                                      ▀▄ ▄▀ 
-▀▄ ▄▀    BY Memo                           ▀▄ ▄▀ 
-▀▄ ▄▀     BY Memo       (@ii02iI)          ▀▄ ▄▀ 
-▀▄ ▄▀ Making the file by Memo              ▀▄ ▄▀   
-▀▄ ▄▀         sticker   : تحويل ملصق         ▀▄ ▄▀ 
-▀▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀▄▄▀▀▄▄▀▄▄▀▀
---]]
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
@@ -21,7 +12,7 @@ local function tosticker(msg, success, result)
     send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
   end
 end
-local function run(msg,matches)
+local function Ch_Dev(msg,matches)
     local receiver = get_receiver(msg)
     local group = msg.to.id
     if msg.reply_id then
@@ -41,6 +32,6 @@ return {
 	"^(ملصق)$",
 	"%[(photo)%]",
   },
-  run = run,
+  run = Ch_Dev,
   } 
---By DevMemo (@ii02ii)
+-- (@Ch_Dev)
