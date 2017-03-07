@@ -33,7 +33,7 @@ echo '🤖 عہۧدد شہۧغل آلہۧمعہۧآلہۧج 🌝✨ \n : '"$Proc
 echo "🔸➖🔹➖🔸➖🔹➖🔸"
 echo '🤖 مہۧدةة آلہۧتہۧشہۧغيہۧل 🐸🍷\n  : '"$uptime"
 echo "🔸➖🔹➖🔸➖🔹➖🔸"
-echo "https://github.com/ii02ii/DevSaqt"
+echo "https://github.com/ii02ii/Dev_Saqt"
 echo "@Ch_Dev"
 
 
