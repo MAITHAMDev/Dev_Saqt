@@ -252,6 +252,7 @@ function create_config( )
 @ii02ii
 @ss02ss
 @w_Dev_d
+@mm02mm
 Channel DEV Saqt TEAM
 @Ch_Dev
 آلآصہٰدآر آلہٰثہٰآنہٰي :
